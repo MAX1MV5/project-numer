@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Form, Col, Button } from 'react-bootstrap'
 import axios from 'axios'
 import ShowTable from '../../components/ShowTable';
+import DisplayCard from '../../components/DisplayCard';
 
 function BisectionMethod() {
     let fx, e, L, R;
@@ -82,6 +83,7 @@ function BisectionMethod() {
 
             </div>
             <div>
+                {result !== null && <DisplayCard title='answer' result={result.answer} /> }
                 {result !== null && <ShowTable columns={columns} result={result.iteration} /> }
             </div>
             

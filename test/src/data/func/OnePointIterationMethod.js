@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Form, Button } from 'react-bootstrap'
 
 import ShowTable from '../../components/ShowTable';
+import DisplayCard from '../../components/DisplayCard';
 
 function OnePointIterationMethod() {
     let fx, e, x0
@@ -41,7 +42,7 @@ function OnePointIterationMethod() {
             data
         )
         setResult(JSON.parse(res.request.response))
-        
+
     }
     return (
         <div className="App">
@@ -67,6 +68,7 @@ function OnePointIterationMethod() {
 
             <div>
                 <div>
+                    {result !== null && <DisplayCard title='answer' result={result.Answer} />}
                     {result !== null && <ShowTable columns={columns} result={result.Iterations} />}
                 </div>
             </div>

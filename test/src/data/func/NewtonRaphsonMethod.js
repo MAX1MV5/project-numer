@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Form, Col, Button } from 'react-bootstrap'
 
 import ShowTable from '../../components/ShowTable';
+import DisplayCard from '../../components/DisplayCard';
 
 function NewtonRaphsonMethod() {
     let fx, e, x0
@@ -63,6 +64,7 @@ function NewtonRaphsonMethod() {
 
             <div>
                 <div>
+                    {result !== null && <DisplayCard title='answer' result={result.Answer} />}
                     {result !== null && <ShowTable columns={columns} result={result.Iterations} />}
                 </div>
             </div>

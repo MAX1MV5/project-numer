@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios'
 import { Form, Col, Button } from 'react-bootstrap'
-import ShowTable from '../../components/ShowTable';
+import ShowTable from '../../components/ShowTable'
+import DisplayCard from '../../components/DisplayCard';
 
 function FalsePositionMethod() {
     let fx, e, L, R;
@@ -78,6 +79,7 @@ function FalsePositionMethod() {
 
             <div>
                 <div>
+                    {result !== null && <DisplayCard title='answer' result={result.Answer} />}
                     {result !== null && <ShowTable columns={columns} result={result.Iterations} />}
                 </div>
             </div>

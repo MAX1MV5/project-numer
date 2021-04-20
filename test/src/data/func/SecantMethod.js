@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Form, Col, Button } from 'react-bootstrap'
 
 import ShowTable from '../../components/ShowTable';
+import DisplayCard from '../../components/DisplayCard';
 
 function SecantMethod() {
     const [result, setResult] = useState(null)
@@ -79,6 +80,7 @@ function SecantMethod() {
 
             <div>
                 <div>
+                    {result !== null && <DisplayCard title='answer' result={result.Answer} />}
                     {result !== null && <ShowTable columns={columns} result={result.Iterations} />}
                 </div>
             </div>
