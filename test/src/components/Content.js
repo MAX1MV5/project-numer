@@ -10,10 +10,13 @@ import GaussJordanMethod from '../data/func/GaussJordanMethod';
 import GaussSeidelIterationMethod from '../data/func/GaussSeidelIterationMethod';
 import JacobiIterationMethod from '../data/func/JacobiIterationMethod';
 import LagrangePolynomials from '../data/func/LagrangePolynomials';
+import Linear from '../data/func/Linear';
 import LUDecompositionMethod from '../data/func/LUDecompositionMethod';
+import Multi from '../data/func/Multi';
 import NewtonRaphsonMethod from '../data/func/NewtonRaphsonMethod';
 import NewtonsDividedDifferences from '../data/func/NewtonsDividedDifferences';
 import OnePointIterationMethod from '../data/func/OnePointIterationMethod';
+import Polynomial from '../data/func/Polynomial';
 import SecantMethod from '../data/func/SecantMethod';
 import SplineInterpolation from '../data/func/SplineInterpolation';
 // import { Router, Route, Link, browserHistory, IndexRoute } from 
@@ -43,6 +46,11 @@ function Content() {
                 <Route path="/InE/Newton" component={NewtonsDividedDifferences} />
                 <Route path="/InE/Lagrange" component={LagrangePolynomials} />
                 <Route path="/InE/Spline" component={SplineInterpolation} />
+            </Route>
+            <Route path="/Reg" >
+                <Route path="/Reg/linear" component={Linear} />
+                <Route path="/Reg/poly" component={Polynomial} />
+                <Route path="/Reg/multi" component={Multi} />
             </Route>
         </BrowserRouter>
     )

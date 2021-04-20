@@ -32,6 +32,11 @@ function AppHeader() {
                             <NavDropdown.Item href="/InE/Lagrange">Lagrange Polynomials</NavDropdown.Item>
                             <NavDropdown.Item href="/InE/Spline">Spline Interpolation</NavDropdown.Item>
                         </NavDropdown>
+                        <NavDropdown title="Regression" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="/Reg/linear">Linear Regression Method</NavDropdown.Item>
+                            <NavDropdown.Item href="/Reg/poly">Polynomial Regression Method</NavDropdown.Item>
+                            <NavDropdown.Item href="/Reg/multi">Multi-Regression Method</NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                     <Nav>
                         {/* <Nav.Link href="#deets">More deets</Nav.Link>

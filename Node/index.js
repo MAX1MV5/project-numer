@@ -6,6 +6,7 @@ import cors from 'cors';
 import RoE from './routes/RoE.js'
 import LAE from './routes/LAE.js'
 import InE from './routes/InE.js'
+import Reg from './routes/Reg.js';
 
 const app = express()
 const port = 8080
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extend: true }))
 app.use('/api/RoE', RoE)
 app.use('/api/LAE', LAE)
 app.use('/api/InE', InE)
+app.use('/api/Reg', Reg)
 
 // app.use('/api/users', router);
 
