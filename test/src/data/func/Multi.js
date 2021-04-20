@@ -7,8 +7,7 @@ import ShowList from '../../components/ShowList';
 function Multi(){
     const [result, setResult] = useState(null)
     const [data, setData] = useState({
-        A: null,
-        o: ''
+        A: ''
     })
     function set() {
         var A = document.getElementById("A").value;
@@ -25,7 +24,7 @@ function Multi(){
         )
         setResult(JSON.parse(res.request.response))
 
-        console.log(result)
+        // console.log(result)
     }
 
     return (
@@ -42,7 +41,6 @@ function Multi(){
             </div>
             <div>
                 { result !== null && <ShowList title='Answer is' result={result.answer} />}
-                {/* {result !== null && <DisplayCard title={title} result={result.answer[1]} />} */}
             </div>
         </div>
     )
