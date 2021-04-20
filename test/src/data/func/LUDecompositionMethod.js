@@ -26,7 +26,7 @@ function LUDecompositionMethod() {
         )
         setResult(JSON.parse(res.request.response))
 
-        console.log(result.Matrix[0].A)
+        // console.log(result.Matrix[0].A)
     }
 
     return (
