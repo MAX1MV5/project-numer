@@ -1,0 +1,24 @@
+name: numerfront
+
+on:
+  push: 
+    branches: [ main ]
+jobs:
+  push_to_registry: 
+    name: docker hub frontend numer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Docker Login
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - name: Build Docker frontend numer 
+        run: |
+          docker build . -t max1mv5fe/numerf:lastest
+      - name: Push to Docker frontend numer
+        run: |
+          docker push max1mv5fe/numerf:lastest
