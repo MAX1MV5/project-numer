@@ -9,6 +9,7 @@ function App() {
         <div className="App">
             <AppHeader />
             <Content />
+            <p>{process.env.DIDYOUSEE}</p>
         </div>
     );
 }
